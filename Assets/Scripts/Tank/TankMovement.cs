@@ -21,6 +21,7 @@ public class TankMovement : MonoBehaviour
 
     private void Awake()
     {
+        //This gets the rigid body!
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
