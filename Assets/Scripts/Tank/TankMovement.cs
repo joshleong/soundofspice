@@ -3,7 +3,7 @@
 public class TankMovement : MonoBehaviour
 {
     public int m_PlayerNumber = 1;
-    public float m_Speed = 13f;
+    public float m_Speed = 12f;
     public float m_TurnSpeed = 180f;
     public AudioSource m_MovementAudio;
     public AudioClip m_EngineIdling;
@@ -21,23 +21,25 @@ public class TankMovement : MonoBehaviour
 
     private void Awake()
     {
-        //This gets the rigid body!
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
 
     private void OnEnable ()
     {
-        //Whoa Kinematic is False
         m_Rigidbody.isKinematic = false;
         m_MovementInputValue = 0f;
+        m_TurnInputValue = 2f;
+
+        m_TurnInputValue = 1f;
+
         m_TurnInputValue = 0f;
+
     }
 
 
     private void OnDisable ()
     {
-        //But Now Disable!
         m_Rigidbody.isKinematic = true;
     }
 
