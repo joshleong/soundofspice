@@ -28,6 +28,7 @@ public class TankMovement : MonoBehaviour
 
     private void OnEnable ()
     {
+        //Whoa Kinematic is False
         m_Rigidbody.isKinematic = false;
         m_MovementInputValue = 0f;
         m_TurnInputValue = 0f;
@@ -36,6 +37,7 @@ public class TankMovement : MonoBehaviour
 
     private void OnDisable ()
     {
+        //But Now Disable!
         m_Rigidbody.isKinematic = true;
     }
 
