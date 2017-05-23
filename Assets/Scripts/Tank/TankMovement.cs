@@ -37,6 +37,7 @@ public class TankMovement : MonoBehaviour
 
     private void OnDisable ()
     {
+        //But Now Disable!
         m_Rigidbody.isKinematic = true;
     }
 
